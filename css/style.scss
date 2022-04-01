@@ -1,0 +1,59 @@
+@import url(./null.css);
+@import url(./animate.css);
+
+%buttonS {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  
+  /* identical to box height, or 26px */
+  display: flex;
+  align-items: center;
+  
+  /* red */
+  color: #DA4533;
+}
+
+.container{
+  max-width: 1216px;
+  margin: auto;
+}
+
+.background{
+  &__header{
+    background: #1B1B1B;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.header {
+
+  &__logo {
+  }
+
+  &__middle {
+  }
+
+  &__phone {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+color: #FFFFFF;
+  }
+
+  &__button-consultation {
+
+@extend %buttonS;
+  }
+
+  &__nav {
+  }
+
+  &__list {
+  }
+}
+

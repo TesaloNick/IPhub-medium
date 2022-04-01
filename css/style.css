@@ -1,0 +1,39 @@
+@import url(./null.css);
+@import url(./animate.css);
+.header__button-consultation {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  /* identical to box height, or 26px */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* red */
+  color: #DA4533;
+}
+
+.container {
+  max-width: 1216px;
+  margin: auto;
+}
+
+.background__header {
+  background: #1B1B1B;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header__phone {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=style.css.map */

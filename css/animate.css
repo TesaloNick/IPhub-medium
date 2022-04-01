@@ -1,0 +1,17 @@
+.animate {
+  position: relative;
+  animation: showLeft 1s ease-in-out;
+  z-index: 1;
+}
+
+@keyframes showLeft {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
