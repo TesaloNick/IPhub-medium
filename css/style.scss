@@ -1,7 +1,6 @@
 @import url(./null.css);
 @import url(./animate.css);
-
-$black-color: #1b1b1b;
+// @import url(./fonts-style.scss);
 
 %H0 {
   font-family: "STIX Two Text";
@@ -100,6 +99,8 @@ $black-color: #1b1b1b;
   text-transform: uppercase;
 }
 
+$black-color: #1b1b1b;
+
 .container {
   max-width: 1216px;
   margin: auto;
@@ -157,11 +158,6 @@ $black-color: #1b1b1b;
 
   &__nav {
     display: grid;
-
-    &.active-menu {
-      transition: all 1s ease-in-out;
-      left: 0px;
-    }
   }
 
   &__list {
@@ -244,6 +240,20 @@ $black-color: #1b1b1b;
 }
 
 .menu {
+  background-color: #434343;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 100%;
+  top: 0;
+  overflow: auto;
+  transition: all 1s ease-in-out;
+
+  &.active-menu {
+    transition: all 1s ease-in-out;
+    left: 0px;
+  }
+
   &__title {
     @extend %SH1;
     color: #5c5c5c;
@@ -259,119 +269,116 @@ $black-color: #1b1b1b;
     }
   }
 
-  &__adress {
-    @extend %label;
-    color: #8a8a8a;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 15px;
-    padding: 15px 0 0 0;
+  &__container {
+    background-color: $black-color;
 
-    p {
-      &:nth-of-type(1) {
-        grid-column: 1/3;
+    @media (max-width: 1000px) {
+      display: grid;
+      grid-template-columns: auto auto;
+      // justify-content: space-between;
+      gap: 120px;
+      padding: 70px 70px 0 120px;
+      margin: 0 0 0 163px;
+
+      @media (max-width: 900px) {
+        padding: 70px 43px 0 70px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 70px 43px 0 50px;
+        margin: 0 0 0 108px;
+        gap: 60px;
+      }
+
+      @media (max-width: 650px) {
+        grid-template-columns: auto;
+      }
+
+      @media (max-width: 450px) {
+        padding: 70px 32px 0 32px;
+        margin: 0 0 0 40px; // ПЕРЕСМОТРЕТЬ
       }
     }
   }
 
-  @media (max-width: 1000px) {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 100%;
-    top: 0;
-    overflow: auto;
-    background-color: #434343;
-    transition: all 1s ease-in-out;
-    padding: 0 0 0 163px;
+  &__list {
+    flex-direction: column;
 
-    @media (max-width: 767px) {
-      padding: 0 0 0 108px;
-    }
+    li {
+      a {
+        font-size: 34px;
 
-    @media (max-width: 450px) {
-      padding: 0 0 0 40px; // ПЕРЕСМОТРЕТЬ
-    }
+        @media (max-width: 767px) {
+          font-size: 28px;
+        }
 
-    &__list {
-      background-color: $black-color;
-      padding: 70px 0 0 120px;
-      flex-direction: column;
-
-      @media (max-width: 900px) {
-        padding: 70px 0 0 70px;
-      }
-
-      @media (max-width: 767px) {
-        padding: 70px 0 0 50px;
-      }
-
-      @media (max-width: 450px) {
-        padding: 70px 0 0 32px;
-      }
-
-      li {
-        a {
-          font-size: 34px;
-
-          @media (max-width: 767px) {
-            font-size: 28px;
-          }
-
-          @media (max-width: 450px) {
-            font-size: 22px;
-          }
+        @media (max-width: 450px) {
+          font-size: 22px;
         }
       }
     }
+  }
 
-    &__text-block {
-      display: block;
-      background-color: $black-color;
-      padding: 70px 70px 0 0;
+  &__text-block {
+    display: block;
+  }
 
-      @media (max-width: 900px) {
-        padding: 70px 43px 0 0;
-      }
+  &__contacts {
+    padding: 0 0 50px 0;
 
-      @media (max-width: 767px) {
-        padding: 70px 0 0 0;
-      }
+    @media (max-width: 767px) {
+      padding: 0 0 40px 0;
+    }
+  }
 
-      @media (max-width: 450px) {
-        padding: 70px 32px 0 0;
-      }
+  &__socials {
+    padding: 0 0 50px 0;
+
+    @media (max-width: 767px) {
+      padding: 0 0 40px 0;
+    }
+  }
+
+  &__road {
+  }
+
+  &__image {
+    display: block;
+    width: 110%;
+    padding: 0 0 100px 0;
+
+    @media (max-width: 767px) {
+      display: none;
     }
 
-    &__contacts {
-      padding: 0 0 50px 0;
-
-      @media (max-width: 767px) {
-        padding: 0 0 40px 0;
-      }
-    }
-
-    &__socials {
-      padding: 0 0 50px 0;
-
-      @media (max-width: 767px) {
-        padding: 0 0 40px 0;
-      }
-    }
-
-    &__road {
-    }
-
-    &__image {
-      display: block;
-      background-color: $black-color;
+    img {
       width: 100%;
+      position: relative;
+      left: -12%;
+    }
+  }
 
-      img {
-        width: 100%;
+  &__adress {
+    @extend %label;
+    color: #8a8a8a;
+    display: inline-grid;
+    // justify-content: start;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 15px;
+    padding: 15px 0 120px 0;
+
+    @media (max-width: 450px) {
+      grid-template-columns: 1fr;
+    }
+
+    p {
+      text-align: left;
+      &:nth-of-type(1) {
+        grid-column: 1/3;
+
+        @media (max-width: 450px) {
+          grid-column: 1/2;
+        }
       }
     }
   }
