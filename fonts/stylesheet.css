@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'STIX Two Text';
-    src: local('STIX Two Text Regular'), local('STIXTwoText-Regular'),
+src: local('STIX Two Text Regular'), local('STIXTwoText-Regular'),
         url('./STIXTwoText-Regular.otf') format('otf'),
         url('./STIXTwoText-Regular.woff2') format('woff2'),
         url('./STIXTwoText-Regular.ttf') format('truetype');

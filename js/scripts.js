@@ -186,19 +186,19 @@
 //   appearup(".footer__left-block", ".footer");
 // });
 
-// //------------------------------меню-------------------------
+//------------------------------меню-------------------------
 
-// function toggleMenu() {
-//   $('.header__burger-menu').toggleClass('active-menu')
-//   $('.header__nav').toggleClass('active-menu')
-//   $('.open-menu-scroll').toggleClass('active-menu')
-// }
+function toggleMenu() {
+  $('.header__burger-menu').toggleClass('active-menu')
+  $('.header__nav').toggleClass('active-menu')
+  // $('.open-menu-scroll').toggleClass('active-menu')
+}
 
-// $(function () {
-//   $('.header__burger-menu').click(() => {
-//     toggleMenu()
-//   })
-// });
+$(function () {
+  $('.header__burger-menu').click(() => {
+    toggleMenu()
+  })
+});
 
 // //------------------------------pop-up-------------------------
 
@@ -255,3 +255,4 @@
 //   }
 //   return false;
 // }
+
