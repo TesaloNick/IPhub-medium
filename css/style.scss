@@ -157,7 +157,7 @@ $black-color: #1b1b1b;
   }
 
   &__nav {
-    display: grid;
+    // display: grid;
   }
 
   &__list {
@@ -182,9 +182,15 @@ $black-color: #1b1b1b;
       height: 46px;
       padding: 0 9px;
       background: rgba(255, 255, 255, 0.05);
+      transition: 0.5s;
       border-radius: 5px;
       cursor: pointer;
       z-index: 5;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transition: 0.5s;
+      }
 
       &.active-menu {
         span {
@@ -240,18 +246,20 @@ $black-color: #1b1b1b;
 }
 
 .menu {
-  background-color: #434343;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 100%;
-  top: 0;
-  overflow: auto;
-  transition: all 1s ease-in-out;
-
-  &.active-menu {
+  @media (max-width: 1000px) {
+    background-color: #434343;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    overflow: auto;
     transition: all 1s ease-in-out;
-    left: 0px;
+
+    &.active-menu {
+      transition: all 1s ease-in-out;
+      left: 0px;
+    }
   }
 
   &__title {
@@ -302,25 +310,31 @@ $black-color: #1b1b1b;
   }
 
   &__list {
-    flex-direction: column;
+    @media (max-width: 1000px) {
+      flex-direction: column;
 
-    li {
-      a {
-        font-size: 34px;
+      li {
+        a {
+          font-size: 34px;
 
-        @media (max-width: 767px) {
-          font-size: 28px;
-        }
+          @media (max-width: 767px) {
+            font-size: 28px;
+          }
 
-        @media (max-width: 450px) {
-          font-size: 22px;
+          @media (max-width: 450px) {
+            font-size: 22px;
+          }
         }
       }
     }
   }
 
   &__text-block {
-    display: block;
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: block;
+    }
   }
 
   &__contacts {
@@ -362,7 +376,6 @@ $black-color: #1b1b1b;
     @extend %label;
     color: #8a8a8a;
     display: inline-grid;
-    // justify-content: start;
     grid-template-columns: repeat(2, auto);
     gap: 10px 15px;
     padding: 15px 0 120px 0;

@@ -112,11 +112,6 @@
   color: #da4533;
 }
 
-.header__nav {
-  display: -ms-grid;
-  display: grid;
-}
-
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,9 +136,16 @@
     height: 46px;
     padding: 0 9px;
     background: rgba(255, 255, 255, 0.05);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     border-radius: 5px;
     cursor: pointer;
     z-index: 5;
+  }
+  .header__burger-menu:hover {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .header__burger-menu.active-menu span {
     -webkit-transition: all 0.5s ease-in-out;
@@ -195,22 +197,23 @@
   display: none;
 }
 
-.menu {
-  background-color: #434343;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 100%;
-  top: 0;
-  overflow: auto;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.menu.active-menu {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  left: 0px;
+@media (max-width: 1000px) {
+  .menu {
+    background-color: #434343;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    overflow: auto;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  .menu.active-menu {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    left: 0px;
+  }
 }
 
 .menu__title {
@@ -270,31 +273,38 @@
   }
 }
 
-.menu__list {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media (max-width: 1000px) {
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu__list li a {
+    font-size: 34px;
+  }
 }
 
-.menu__list li a {
-  font-size: 34px;
-}
-
-@media (max-width: 767px) {
+@media (max-width: 1000px) and (max-width: 767px) {
   .menu__list li a {
     font-size: 28px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1000px) and (max-width: 450px) {
   .menu__list li a {
     font-size: 22px;
   }
 }
 
 .menu__text-block {
-  display: block;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .menu__text-block {
+    display: block;
+  }
 }
 
 .menu__contacts {
