@@ -29,7 +29,7 @@
       to: null,
       decimalPlaces: null,
       decimalPoint: '.',
-      thousandSeparator: ' ',
+      thousandSeparator: '',
       duration: 1000, // ms; TOTAL length animation
       leeway: 50, // percent of duraion
       easing: 'spincrementEasing',
