@@ -153,8 +153,8 @@ function countup(className) {
 
 $(function () {
   countup("count", $(".count").text());
-  countup("count2", $(".count2").text());
-  countup("count3", $(".count3").text());
+  // countup("count2", $(".count2").text());
+  // countup("count3", $(".count3").text());
 });
 
 // //------------------------------всплывающие блоки-------------------------
@@ -200,27 +200,41 @@ $(function () {
   })
 });
 
-// //------------------------------pop-up-------------------------
+//------------------------------pop-up-------------------------
 
-// function popUp(button) {
-//   $(`.${button}`).click(() => {
-//     $('.pop-up').toggleClass('active')
-//   })
-// }
+function popUp(button) {
+  $(`.${button}`).click((event) => {
+    event.preventDefault();
+    $('.pop-up').toggleClass('active')
+  })
+}
 
-// $(function () {
-//   $('form').submit((event) => {
-//     event.preventDefault();
-//     // document.querySelectorAll('input').forEach(item => item.value = '')
+$(function () {
+  popUp('main__button-consultation')
+  popUp('pop-up__container')
+  popUp('pop-up__close')
+  // popUp('pop-up__button')
+});
 
-//   })
-//   popUp('pop-up__container')
-//   popUp('main__button')
-//   popUp('pop-up__close')
-//   popUp('order__button')
-//   popUp('service__button')
-//   popUp('pop-up__button')
-// });
+//------------------------------замена фона при непустом поле ввода-------------------------
+
+function changeBackground(item) {
+  item.onchange = function () {
+    if (this.value.length > 0) {
+      this.style.backgroundColor = "rgba(138, 138, 138, 0.15)";
+    } else {
+      this.style.backgroundColor = "rgba(138, 138, 138, 0.1)";
+    }
+  };
+}
+
+document.querySelectorAll('.pop-up__input').forEach(item => {
+  changeBackground(item)
+})
+
+document.querySelectorAll('.pop-up__textarea').forEach(item => {
+  changeBackground(item)
+})
 
 // //------------------------------scroll-------------------------
 
