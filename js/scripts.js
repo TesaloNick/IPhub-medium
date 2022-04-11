@@ -37,32 +37,43 @@
 //   defaultSelectedIndex: 2,
 // });
 
-// $('.workers__slider').slick({
-//   infinite: true,
-//   arrows: false,
-//   slidesToShow: 5,
-//   dots: true,
-//   responsive: [
-//     {
-//       breakpoint: 950,
-//       settings: {
-//         slidesToShow: 4
-//       }
-//     },
-//     {
-//       breakpoint: 800,
-//       settings: {
-//         slidesToShow: 3
-//       }
-//     },
-//     {
-//       breakpoint: 615,
-//       settings: {
-//         slidesToShow: 1
-//       }
-//     }
-//   ]
-// });
+$('.services__slider').slick({
+  infinite: true,
+  arrows: true,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  prevArrow: "<div class='prev'><img src='../img/main/button-arrow-right.svg' class='prev-arrow'></div>",
+  nextArrow: "<div class='next'><img src='../img/main/button-arrow-right.svg' class='next-arrow'></div>",
+  // variableWidth: true,
+  // dots: true,
+  responsive: [
+    {
+      breakpoint: 1256,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 
 // if ($(window).width() <= 900) {
 //   $('.steps__content-block').slick({

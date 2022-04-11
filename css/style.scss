@@ -1,6 +1,6 @@
 @import url(./null.css);
 @import url(./animate.css);
-// @import url(./fonts-style.scss);
+@import url(./custom-font-styles.css);
 
 %H0 {
   font-family: "STIX Two Text";
@@ -112,6 +112,10 @@ $grey-color: #8a8a8a;
     background-color: $black-color;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
       url(../img/backgrounds/backgroud-main.png) center/cover no-repeat; // ПРОВЕРИТЬ
+  }
+
+  &__services {
+    background: url(../img/services/backgroud.png) center/cover no-repeat;
   }
 }
 
@@ -1039,5 +1043,209 @@ $grey-color: #8a8a8a;
       background: rgba(255, 255, 255, 0.1);
       transition: 0.5s;
     }
+  }
+}
+
+.services {
+  &__title {
+    @extend %H1;
+    color: $black-color;
+  }
+
+  &__subtitle {
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+
+    p {
+      @extend %SH2;
+      color: $grey-color;
+    }
+  }
+
+  &__button {
+    display: block;
+    min-width: 135px;
+    height: 41px;
+    border: 1px solid $red-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 0 15px 0 0;
+
+    span {
+      @extend %buttonS;
+      text-align: center;
+      color: $red-color;
+    }
+
+    img {
+      position: absolute;
+      right: -15px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    padding: 0 0 75px 0;
+
+    .slick-list {
+      .slick-track {
+        display: flex;
+        .slick-slide {
+          height: auto;
+        }
+      }
+    }
+
+    .slick-arrow {
+      position: absolute;
+      bottom: 0;
+      width: 40px;
+      height: 40px !important;
+      border: 1px solid $red-color;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.prev {
+        height: 100%;
+        right: calc(50% + 10px);
+
+        .prev-arrow {
+          position: absolute;
+          left: -15px;
+          top: 50%;
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &.next {
+        height: 100%;
+        left: calc(50% + 10px);
+
+        .next-arrow {
+          position: relative;
+          right: -15px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.service {
+  background: $black-color;
+  border-radius: 8px;
+  padding: 20px 25px;
+  display: flex !important;
+  flex-direction: column;
+  margin: 0 10px;
+  transition: 0.5s;
+
+  @media (max-width: 500px) {
+    padding: 10px 15px;
+  }
+
+  &:hover {
+    .service__button {
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transition: 0.3s;
+
+      span {
+        border: 1px solid #fff;
+        transition: 0.3s;
+      }
+    }
+
+    .icon-service-image1,
+    .icon-service-image2,
+    .icon-service-image3,
+    .icon-service-image4,
+    .icon-service-image5 {
+      &::before {
+        color: $grey-color;
+        transition: 0.3s;
+      }
+    }
+
+    .service__title {
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .service__subtitle {
+      display: block;
+      transition: 0.3s;
+      top: 0;
+    }
+  }
+
+  &__button {
+    width: 18px;
+    height: 18px;
+    border-top: 2px solid #5c5c5c;
+    border-right: 2px solid #5c5c5c;
+    border-radius: 0 1px 0 0;
+    position: relative;
+    align-self: end;
+    transition: 0.3s;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 7px;
+      left: -4px;
+      width: 24.5px;
+      border: 1px solid #5c5c5c;
+      // border-radius: 0 1px 1px 0;
+      transform: rotate(-45deg);
+      transition: 0.3s;
+    }
+  }
+
+  .icon-service-image1,
+  .icon-service-image2,
+  .icon-service-image3,
+  .icon-service-image4,
+  .icon-service-image5 {
+    font-size: 167px;
+    align-self: center;
+
+    @media (max-width: 1000px) {
+      font-size: 16.5vw;
+    }
+
+    &::before {
+      transition: 0.3s;
+    }
+  }
+
+  &__title {
+    @extend %buttonS;
+    color: $grey-color;
+    flex: 1 1 auto;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+    @media (max-width: 500px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    @extend %label;
+    color: $grey-color;
+    position: relative;
+    flex: 1 1 auto;
+    // top: 100px;
   }
 }
