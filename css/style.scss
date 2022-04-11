@@ -124,7 +124,8 @@ $grey-color: #8a8a8a;
   background-color: rgba(74%, 74%, 74%, 0.75);
   z-index: 10;
   cursor: pointer;
-  transition: 1s ease-in-out;
+  transition: 0.7s ease-in-out;
+  overflow-y: auto;
 
   &__container {
     position: absolute;
@@ -146,11 +147,19 @@ $grey-color: #8a8a8a;
     border-radius: 10px;
     cursor: auto;
     z-index: 11;
+
+    @media (max-width: 500px) {
+      padding: 30px 40px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 20px 20px;
+    }
   }
 
   &__close {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     position: absolute;
     right: 20px;
     top: 20px;
@@ -188,18 +197,21 @@ $grey-color: #8a8a8a;
   &__form {
     display: flex;
     flex-direction: column;
-    overflow: auto;
   }
 
   &.active {
     top: 0;
-    transition: 1s ease-in-out;
+    transition: 0.7s ease-in-out;
   }
 
   &__title {
     @extend %SH0;
     text-align: center;
     padding: 0 0 8px 0;
+
+    @media (max-width: 350px) {
+      font-size: 20px;
+    }
   }
 
   &__subtitle {
@@ -268,7 +280,12 @@ $grey-color: #8a8a8a;
   }
 
   &__radio {
-    padding: 0 0 26px 0;
+    padding: 0 0 26px 26px;
+    position: relative;
+
+    @media (max-width: 400px) {
+      padding: 0 0 26px 20px;
+    }
 
     input {
       position: absolute;
@@ -276,31 +293,8 @@ $grey-color: #8a8a8a;
       opacity: 0;
 
       &:checked + label::before {
-        border-color: #0b76ef;
-        background-color: #0b76ef;
-        background-image: url("../img/pop-up/check.svg");
-      }
-
-      /* стили при наведении курсора на checkbox */
-      &:not(:disabled):not(:checked) + label:hover::before {
-        border-color: #b3d7ff;
-      }
-      /* стили для активного состояния чекбокса (при нажатии на него) */
-      &:not(:disabled):active + label::before {
-        background-color: #b3d7ff;
-        border-color: #b3d7ff;
-      }
-      /* стили для чекбокса, находящегося в фокусе */
-      &:focus + label::before {
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-      }
-      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-      &:focus:not(:checked) + label::before {
-        border-color: #80bdff;
-      }
-      /* стили для чекбокса, находящегося в состоянии disabled */
-      &:disabled + label::before {
-        background-color: #e9ecef;
+        border-color: $red-color;
+        background: url("../img/pop-up/check.svg") center/9px 9px no-repeat, $red-color;
       }
     }
 
@@ -311,23 +305,23 @@ $grey-color: #8a8a8a;
       font-size: 12px;
       line-height: 165%;
       color: #ffffff;
-      display: inline-flex;
       align-items: center;
       user-select: none;
 
       &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
         content: "";
         display: inline-block;
-        width: 1em;
-        height: 1em;
-        flex-shrink: 0;
-        flex-grow: 0;
-        border: 1px solid #adb5bd;
-        border-radius: 0.25em;
-        margin-right: 0.5em;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 50% 50%;
+        width: 16px;
+        height: 16px;
+        border: 1px solid grey;
+        border-radius: 2px;
+
+        @media (max-width: 400px) {
+          width: 13px;
+        }
       }
 
       a {
@@ -1044,9 +1038,6 @@ $grey-color: #8a8a8a;
     &:hover {
       background: rgba(255, 255, 255, 0.1);
       transition: 0.5s;
-    }
-    img {
-      // width: 100%;
     }
   }
 }
