@@ -45,3 +45,7 @@
   content: "\e904";
   color: #fff;
 }
+.icon-shape:before {
+  content: "\e905";
+  color: #fff;
+}

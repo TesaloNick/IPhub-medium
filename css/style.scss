@@ -845,6 +845,13 @@ $grey-color: #8a8a8a;
     cursor: pointer;
     position: relative;
 
+    &:hover {
+      img {
+        right: -18px;
+        transition: 0.5s;
+      }
+    }
+
     span {
       @extend %buttonS;
       text-align: center;
@@ -853,7 +860,9 @@ $grey-color: #8a8a8a;
 
     img {
       position: absolute;
-      right: -15px;
+      width: 30px;
+      right: -12px;
+      transition: 0.5s;
     }
   }
 
@@ -1094,6 +1103,13 @@ $grey-color: #8a8a8a;
     position: relative;
     margin: 0 15px 0 0;
 
+    &:hover {
+      img {
+        right: -18px;
+        transition: 0.5s;
+      }
+    }
+
     span {
       @extend %buttonS;
       text-align: center;
@@ -1102,7 +1118,9 @@ $grey-color: #8a8a8a;
 
     img {
       position: absolute;
-      right: -15px;
+      width: 30px;
+      right: -12px;
+      transition: 0.5s;
     }
   }
 
@@ -1156,13 +1174,31 @@ $grey-color: #8a8a8a;
       border-radius: 50%;
       cursor: pointer;
 
+      &:hover {
+        &.prev {
+          .prev-arrow {
+            left: -23px;
+            transition: 0.5s;
+          }
+        }
+
+        &.next {
+          .next-arrow {
+            right: -23px;
+            transition: 0.5s;
+          }
+        }
+      }
+
       &.prev {
         height: 100%;
         right: calc(50% + 10px);
 
         .prev-arrow {
           position: absolute;
-          left: -15px;
+          width: 42px;
+          left: -17px;
+          transition: 0.5s;
           top: 50%;
           transform: translateY(-50%) rotate(180deg);
         }
@@ -1174,7 +1210,9 @@ $grey-color: #8a8a8a;
 
         .next-arrow {
           position: relative;
-          right: -15px;
+          width: 42px;
+          right: -17px;
+          transition: 0.5s;
           top: 50%;
           transform: translateY(-50%);
         }
@@ -1189,6 +1227,7 @@ $grey-color: #8a8a8a;
   padding: 20px 25px;
   display: flex !important;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0 20px 0 0;
   transition: 0.5s;
   position: relative;
@@ -1202,14 +1241,9 @@ $grey-color: #8a8a8a;
   }
 
   &:hover {
-    .service__button {
-      border-top: 2px solid #fff;
-      border-right: 2px solid #fff;
-      transition: 0.5s;
-
-      span {
-        border: 1px solid #fff;
-        background-color: #fff;
+    .icon-shape {
+      &::before {
+        color: #fff;
         transition: 0.5s;
       }
     }
@@ -1228,7 +1262,6 @@ $grey-color: #8a8a8a;
     .service__title {
       color: #fff;
       transition: 0.5s;
-      // bottom: auto;
     }
 
     .service__subtitle {
@@ -1238,27 +1271,13 @@ $grey-color: #8a8a8a;
     }
   }
 
-  &__button {
-    width: 18px;
-    height: 18px;
-    border-top: 2px solid #5c5c5c;
-    border-right: 2px solid #5c5c5c;
-    border-radius: 0 1px 0 0;
-    position: relative;
-    align-self: end;
-    transition: 0.5s;
-    cursor: pointer;
-    margin: 0 0 43px 0;
+  .icon-shape {
+    align-self: flex-end;
+    padding: 0 0 40px 0;
 
-    span {
-      position: absolute;
-      top: 6px;
-      left: -3px;
-      width: 23.5px;
-      border: 1px solid #5c5c5c;
-      background-color: #5c5c5c;
-      border-radius: 0 1px 1px 0;
-      transform: rotate(-45deg);
+    &::before {
+      font-size: 20px;
+      color: $grey-color;
       transition: 0.5s;
     }
   }
@@ -1268,12 +1287,20 @@ $grey-color: #8a8a8a;
   .icon-service-image3,
   .icon-service-image4,
   .icon-service-image5 {
-    font-size: 167px;
+    font-size: 176px;
     align-self: center;
     padding: 0 0 30px 0;
 
     @media (max-width: 1000px) {
       font-size: 16.5vw;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 27.5vw;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 50vw;
     }
 
     &::before {
@@ -1308,5 +1335,6 @@ $grey-color: #8a8a8a;
     position: relative;
     top: 50%;
     transition: 0.5s;
+    justify-self: end;
   }
 }

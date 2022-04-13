@@ -992,6 +992,12 @@
   position: relative;
 }
 
+.main__button-service:hover img {
+  right: -18px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .main__button-service span {
   text-align: center;
   color: #da4533;
@@ -999,7 +1005,10 @@
 
 .main__button-service img {
   position: absolute;
-  right: -15px;
+  width: 30px;
+  right: -12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 767px) {
@@ -1314,6 +1323,12 @@
   margin: 0 15px 0 0;
 }
 
+.services__button-top:hover img, .services__button-bottom:hover img {
+  right: -18px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .services__button-top span, .services__button-bottom span {
   text-align: center;
   color: #da4533;
@@ -1321,7 +1336,10 @@
 
 .services__button-top img, .services__button-bottom img {
   position: absolute;
-  right: -15px;
+  width: 30px;
+  right: -12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -1382,6 +1400,18 @@
   cursor: pointer;
 }
 
+.services__slider .slick-arrow:hover.prev .prev-arrow {
+  left: -23px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.services__slider .slick-arrow:hover.next .next-arrow {
+  right: -23px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .services__slider .slick-arrow.prev {
   height: 100%;
   right: calc(50% + 10px);
@@ -1389,7 +1419,10 @@
 
 .services__slider .slick-arrow.prev .prev-arrow {
   position: absolute;
-  left: -15px;
+  width: 42px;
+  left: -17px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
@@ -1402,7 +1435,10 @@
 
 .services__slider .slick-arrow.next .next-arrow {
   position: relative;
-  right: -15px;
+  width: 42px;
+  right: -17px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1419,6 +1455,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 20px 0 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1435,16 +1474,8 @@
   visibility: hidden;
 }
 
-.service:hover .service__button {
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.service:hover .service__button span {
-  border: 1px solid #fff;
-  background-color: #fff;
+.service:hover .icon-shape::before {
+  color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1472,32 +1503,15 @@
   top: 0;
 }
 
-.service__button {
-  width: 18px;
-  height: 18px;
-  border-top: 2px solid #5c5c5c;
-  border-right: 2px solid #5c5c5c;
-  border-radius: 0 1px 0 0;
-  position: relative;
+.service .icon-shape {
   -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  cursor: pointer;
-  margin: 0 0 43px 0;
+      align-self: flex-end;
+  padding: 0 0 40px 0;
 }
 
-.service__button span {
-  position: absolute;
-  top: 6px;
-  left: -3px;
-  width: 23.5px;
-  border: 1px solid #5c5c5c;
-  background-color: #5c5c5c;
-  border-radius: 0 1px 1px 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.service .icon-shape::before {
+  font-size: 20px;
+  color: #8a8a8a;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1507,7 +1521,7 @@
 .service .icon-service-image3,
 .service .icon-service-image4,
 .service .icon-service-image5 {
-  font-size: 167px;
+  font-size: 176px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1521,6 +1535,26 @@
   .service .icon-service-image4,
   .service .icon-service-image5 {
     font-size: 16.5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .service .icon-service-image1,
+  .service .icon-service-image2,
+  .service .icon-service-image3,
+  .service .icon-service-image4,
+  .service .icon-service-image5 {
+    font-size: 27.5vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .service .icon-service-image1,
+  .service .icon-service-image2,
+  .service .icon-service-image3,
+  .service .icon-service-image4,
+  .service .icon-service-image5 {
+    font-size: 50vw;
   }
 }
 
@@ -1567,5 +1601,7 @@
   top: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 /*# sourceMappingURL=style.css.map */

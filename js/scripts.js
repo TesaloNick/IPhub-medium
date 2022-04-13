@@ -1,4 +1,5 @@
-// //--------------------слайдеры-------------------------
+// //--------------------выбор языка-------------------------
+
 // var ddData = [
 //   {
 //     text: "EN",
@@ -31,6 +32,8 @@
 //     imageSrc: "../img/header/flags/yiddish.svg"
 //   }
 // ];
+
+//--------------------слайдеры-------------------------
 
 // $('#lan').ddslick({
 //   data: ddData,
@@ -81,6 +84,37 @@ $('.services__slider').slick({
     }
   ]
 });
+
+//--------------------удаление слайдов при определенной ширине-------------------------
+
+let amountOfSlides = document.querySelectorAll('.service').length;
+let windowWidth = $(window).width();
+
+if (windowWidth <= 1500 && windowWidth > 1256) {
+  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
+} else if (windowWidth <= 1256 && windowWidth > 1000) {
+  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
+} else if (windowWidth <= 1000 && windowWidth > 700) {
+  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 3);
+} else if (windowWidth <= 700 && windowWidth > 450) {
+  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 3);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 4);
+} else if (windowWidth <= 450) {
+  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 3);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 4);
+  $('.services__slider').slick('slickRemove', amountOfSlides - 5);
+}
+// $('.service').on('click', function () {
+// console.log(this);
+// $('.services__slider').slick('slickRemove', $('.slick-slide').index(this) - 1)
+// });
 
 // if ($(window).width() <= 900) {
 //   $('.steps__content-block').slick({
@@ -231,7 +265,7 @@ $(function () {
   popUp('main__button-consultation')
   popUp('pop-up__container')
   popUp('pop-up__close')
-  // popUp('pop-up__button')
+  popUp('header__button-consultation')
 });
 
 //------------------------------замена фона при непустом поле ввода-------------------------
