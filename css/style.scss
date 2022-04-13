@@ -342,10 +342,18 @@ $grey-color: #8a8a8a;
     color: $red-color;
     @extend %buttonS;
 
+    &:hover {
+      img {
+        right: -18px;
+        transition: 0.5s;
+      }
+    }
+
     img {
       width: 30px;
       position: absolute;
-      right: -15px;
+      right: -12px;
+      transition: 0.5s;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -990,6 +998,7 @@ $grey-color: #8a8a8a;
     background: #202020;
     transition: 0.5s;
     border-radius: 8px;
+    height: 100%;
 
     @media (max-width: 500px) {
       padding: 20px;

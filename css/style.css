@@ -367,10 +367,18 @@
   color: #da4533;
 }
 
+.pop-up__button:hover img {
+  right: -18px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .pop-up__button img {
   width: 30px;
   position: absolute;
-  right: -15px;
+  right: -12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1163,6 +1171,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 8px;
+  height: 100%;
 }
 
 @media (max-width: 500px) {
