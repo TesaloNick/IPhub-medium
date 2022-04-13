@@ -10,7 +10,7 @@
   color: #ffffff;
 }
 
-.experience__title, .services__title {
+.experience__title, .services__title, .test__title {
   font-family: "STIX Two Text";
   font-style: normal;
   font-weight: 400;
@@ -37,7 +37,7 @@
   color: #ffffff;
 }
 
-.experience__subtitle, .services__subtitle p {
+.experience__subtitle, .services__subtitle p, .test__subtitle {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -106,6 +106,10 @@
 
 .background__services {
   background: url(../img/services/backgroud.png) center/cover no-repeat;
+}
+
+.background__test {
+  background: url(../img/test/backgroud.png) center/cover no-repeat;
 }
 
 .pop-up {
@@ -1266,6 +1270,30 @@
   color: #1b1b1b;
 }
 
+@media (max-width: 900px) {
+  .services__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .services__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .services__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 359px) {
+  .services__title {
+    font-size: 20px;
+  }
+}
+
 .services__subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1300,6 +1328,12 @@
 
 .services__subtitle p {
   color: #8a8a8a;
+}
+
+@media (max-width: 400px) {
+  .services__subtitle p {
+    font-size: 14px;
+  }
 }
 
 .services__button-top, .services__button-bottom {
@@ -1603,5 +1637,74 @@
   transition: 0.5s;
   -ms-grid-column-align: end;
       justify-self: end;
+}
+
+.test {
+  padding: 160px 0;
+}
+
+@media (max-width: 1252px) {
+  .test {
+    padding: 120px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .test {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .test {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .test__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .test__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .test__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 359px) {
+  .test__title {
+    font-size: 20px;
+  }
+}
+
+.test__subtitle {
+  padding: 16px 0 50px 0;
+}
+
+@media (max-width: 1252px) {
+  .test__subtitle {
+    padding: 16px 0 40px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .test__subtitle {
+    padding: 14px 0 40px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .test__subtitle {
+    padding: 12px 0 35px 0;
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
