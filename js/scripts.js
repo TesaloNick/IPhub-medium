@@ -296,7 +296,7 @@ document.querySelectorAll('.pop-up__textarea').forEach(item => {
   changeBackground(item)
 })
 
-// //------------------------------scroll-------------------------
+//------------------------------scroll-------------------------
 
 function removeMenu() {
   $('.header__burger-menu').removeClass('active-menu')
@@ -331,5 +331,27 @@ function slowScroll(id) {
   return false;
 }
 
+//------------------------------выбор элемента из списка в тесте-------------------------
 
+document.querySelectorAll('.test-slider__option').forEach(slide => slide.addEventListener('click', function (e) {
+  e.preventDefault()
+  let testList = this.parentNode.children
+  for (let item of testList) {
+    item.classList.remove("chosen")
+  }
+  this.classList.add("chosen");
+}))
 
+//------------------------------Элементы тест-слайдера-------------------------
+
+const amountTestSlides = document.querySelectorAll('.test-slider__slide')
+document.querySelector('.test__counter-slider > p > span:nth-of-type(2)').innerHTML = amountTestSlides.length;
+
+// const asd = document.querySelectorAll('.test-slider')
+console.log(amountTestSlides);
+for (let i = 0; i < amountTestSlides.length; i++) {
+  if (amountTestSlides[i].classList.contains('slick-current')) {
+    document.querySelector('.test__counter-slider > p > span:nth-of-type(1)').innerHTML = `${i + 1}/`
+    console.log(i);
+  }
+}
