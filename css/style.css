@@ -19,7 +19,7 @@
   color: #ffffff;
 }
 
-.pop-up__title, .test-slider__title {
+.pop-up__title, .test-slider__title, .bonuses__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -28,7 +28,7 @@
   color: #ffffff;
 }
 
-.menu__title {
+.menu__title, .bonuses__text {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -110,6 +110,25 @@
 
 .background__test {
   background: url(../img/test/backgroud.png) center/cover no-repeat;
+  padding: 160px 0;
+}
+
+@media (max-width: 1252px) {
+  .background__test {
+    padding: 120px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .background__test {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .background__test {
+    padding: 60px 0;
+  }
 }
 
 .pop-up {
@@ -1670,28 +1689,6 @@
       justify-self: end;
 }
 
-.test {
-  padding: 160px 0;
-}
-
-@media (max-width: 1252px) {
-  .test {
-    padding: 120px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .test {
-    padding: 80px 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .test {
-    padding: 60px 0;
-  }
-}
-
 @media (max-width: 900px) {
   .test__title {
     font-size: 32px;
@@ -1980,5 +1977,66 @@
   color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.bonuses__title {
+  padding: 50px 0 25px;
+}
+
+@media (max-width: 1000px) {
+  .bonuses__title {
+    padding: 40px 0 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .bonuses__title {
+    padding: 30px 0 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .bonuses__title {
+    font-size: 20px;
+    padding: 20px 0 10px;
+  }
+}
+
+.bonuses__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.bonuses__bonus {
+  padding: 15px;
+  background: #1b1b1b;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.bonuses__image {
+  width: 101px;
+  height: 101px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bonuses__image img {
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -112,6 +112,17 @@ $grey-color: #8a8a8a;
 
   &__test {
     background: url(../img/test/backgroud.png) center/cover no-repeat;
+    padding: 160px 0;
+
+    @media (max-width: 1252px) {
+      padding: 120px 0;
+    }
+    @media (max-width: 768px) {
+      padding: 80px 0;
+    }
+    @media (max-width: 400px) {
+      padding: 60px 0;
+    }
   }
 }
 
@@ -1386,18 +1397,6 @@ $grey-color: #8a8a8a;
 }
 
 .test {
-  padding: 160px 0;
-
-  @media (max-width: 1252px) {
-    padding: 120px 0;
-  }
-  @media (max-width: 768px) {
-    padding: 80px 0;
-  }
-  @media (max-width: 400px) {
-    padding: 60px 0;
-  }
-
   &__title {
     @extend %H1;
 
@@ -1609,15 +1608,6 @@ $grey-color: #8a8a8a;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-
-    // &.chosen {
-    //   a{
-    //     background: $red-color;
-    //     color: #fff;
-    //     transition: 0.5s;
-    //   }
-
-    // }
   }
 
   &__option {
@@ -1638,5 +1628,55 @@ $grey-color: #8a8a8a;
       color: #fff;
       transition: 0.5s;
     }
+  }
+}
+
+.bonuses {
+  &__title {
+    @extend %SH0;
+    padding: 50px 0 25px;
+
+    @media (max-width: 1000px) {
+      padding: 40px 0 20px;
+    }
+
+    @media (max-width: 700px) {
+      padding: 30px 0 15px;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 20px;
+      padding: 20px 0 10px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__bonus {
+    padding: 15px;
+    background: $black-color;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__image {
+    width: 101px;
+    height: 101px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__text {
+    @extend %SH1;
   }
 }

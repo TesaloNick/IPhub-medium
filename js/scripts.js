@@ -345,13 +345,13 @@ document.querySelectorAll('.test-slider__option').forEach(slide => slide.addEven
 //------------------------------Элементы тест-слайдера-------------------------
 
 const amountTestSlides = document.querySelectorAll('.test-slider__slide')
-document.querySelector('.test__counter-slider > p > span:nth-of-type(2)').innerHTML = amountTestSlides.length;
+document.querySelector('.test__counter-slider > p > span:nth-of-type(2)').innerHTML = amountTestSlides.length; // изменение общего количества слайдов
 
-// const asd = document.querySelectorAll('.test-slider')
-console.log(amountTestSlides);
-for (let i = 0; i < amountTestSlides.length; i++) {
-  if (amountTestSlides[i].classList.contains('slick-current')) {
-    document.querySelector('.test__counter-slider > p > span:nth-of-type(1)').innerHTML = `${i + 1}/`
-    console.log(i);
+function changeSlider() { // изменение номера атекущего слайда (onclick, mousemove, ontouchend)
+  for (let i = 0; i < amountTestSlides.length; i++) {
+    if (amountTestSlides[i].classList.contains('slick-current')) {
+      document.querySelector('.test__counter-slider > p > span:nth-of-type(1)').innerHTML = `${i + 1}/`
+      // console.log(i);
+    }
   }
 }
