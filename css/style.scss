@@ -696,16 +696,13 @@ $grey-color: #8a8a8a;
     padding: 179px 0 120px;
     gap: 20px;
   }
-
   @media (max-width: 768px) {
     padding: 0 0 36px 0;
     padding: 179px 0 80px;
   }
-
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
   }
-
   @media (max-width: 450px) {
     padding: 110px 0 60px;
   }
@@ -833,11 +830,9 @@ $grey-color: #8a8a8a;
       gap: 30px;
       justify-content: center;
     }
-
     @media (max-width: 550px) {
       flex-direction: column;
     }
-
     @media (max-width: 450px) {
       gap: 25px;
     }
@@ -2337,18 +2332,71 @@ $grey-color: #8a8a8a;
   }
 
   &__userforum {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }
 
 .userforum {
+  display: grid;
+  grid-template-columns: 45fr 49fr 196px;
+  justify-content: space-between;
+  gap: 50px;
+  position: relative;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 31fr 42fr 164px;
+    gap: 35px;
+  }
+  @media (max-width: 950px) {
+    grid-template-columns: 18fr 34fr 149px;
+    gap: 28px;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr 149px;
+    gap: 20px;
+  }
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
+
+  &:nth-of-type(1)::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(140, 140, 140, 1) 0%, rgba(140, 140, 140, 0) 100%);
+    position: absolute;
+    bottom: -20px;
+  }
+
   &__left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      align-items: start;
+    }
+    @media (max-width: 700px) {
+      grid-column: 1/3;
+      flex-direction: row;
+      align-items: center;
+    }
+    @media (max-width: 450px) {
+      grid-column: 1/2;
+    }
   }
 
   &__image {
+    min-width: 100px;
     width: 100px;
+    min-height: 100px;
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
+    filter: grayscale(100%);
 
     @media (max-width: 400px) {
       width: 80px;
@@ -2361,29 +2409,112 @@ $grey-color: #8a8a8a;
   }
 
   &__personal-information {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 
   &__name {
+    @extend %buttonS;
+    color: #1b1b1b;
   }
 
   &__profession {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #5c5c5c;
   }
 
   &__center {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__forumname {
+    @extend %SH1;
+    color: #1b1b1b;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      display: block;
+      // background: linear-gradient(90deg, #da4533 100%, rgba(218, 69, 51, 0) 50%);
+      background: linear-gradient(90deg, rgba(218, 69, 51, 1) 0%, rgba(218, 69, 51, 0) 100%);
+    }
   }
 
   &__description {
+    @extend %body;
+    color: #5c5c5c;
+
+    @media (max-width: 450px) {
+      font-size: 14px;
+    }
   }
 
   &__right {
+    align-self: center;
+    text-align: center;
+    height: 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #da4533;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 20px 0 0;
+
+    @media (max-width: 1000px) {
+      height: 144px;
+    }
+    @media (max-width: 950px) {
+      height: 133px;
+    }
+    @media (max-width: 450px) {
+      width: 133px;
+    }
+
+    &:hover {
+      img {
+        right: -26px;
+        transition: 0.5s;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 42px;
+      right: -21px;
+      transition: 0.5s;
+
+      @media (max-width: 1000px) {
+        width: 35px;
+      }
+    }
   }
 
   &__date {
+    @extend %SH1;
+    color: #1b1b1b;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   &__time {
+    @extend %body;
+    color: #1b1b1b;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
