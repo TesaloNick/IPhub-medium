@@ -281,6 +281,7 @@
       </div>
     </div>
     <div class="background__test">
+      <div class="test__back-image"><img src="./img/test/black-ball.png" alt=""></div>
       <div class="container">
         <div class="test">
           <h2 class="test__title">Не знаете, что вам нужно? </h2>
@@ -289,8 +290,8 @@
             <div class="test__counter-slider">
               <p><span>1/</span><span></span></p>
             </div>
-            <div class="test__slider test-slider" onclick="changeSlider()" mousemove="changeSlider()"
-              ontouchend="changeSlider()">
+            <div class="test__slider test-slider" onclick="changeSlider()" onmouseup="changeSlider()"
+              onmousedown="changeSlider()" ontouchend="changeSlider()" ontouchstart="changeSlider()">
               <div class="test-slider__slide">
                 <p class="test-slider__title">С какой целью вы обращаетесь?</p>
                 <div class="test-slider__options">

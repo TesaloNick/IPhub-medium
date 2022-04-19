@@ -351,7 +351,7 @@ function changeSlider() { // изменение номера атекущего 
   for (let i = 0; i < amountTestSlides.length; i++) {
     if (amountTestSlides[i].classList.contains('slick-current')) {
       document.querySelector('.test__counter-slider > p > span:nth-of-type(1)').innerHTML = `${i + 1}/`
-      // console.log(i);
+      console.log(i);
     }
   }
 }

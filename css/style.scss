@@ -113,6 +113,7 @@ $grey-color: #8a8a8a;
   &__test {
     background: url(../img/test/backgroud.png) center/cover no-repeat;
     padding: 160px 0;
+    position: relative;
 
     @media (max-width: 1252px) {
       padding: 120px 0;
@@ -1397,6 +1398,8 @@ $grey-color: #8a8a8a;
 }
 
 .test {
+  position: relative;
+
   &__title {
     @extend %H1;
 
@@ -1431,10 +1434,35 @@ $grey-color: #8a8a8a;
   }
 
   &__wrapper-slider {
-    width: 1041px;
+    max-width: 1041px;
     position: relative;
+    width: 100%;
 
-    @media (max-width: 1081px) {
+    @media (max-width: 1000px) {
+      width: 70%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__back-image {
+    position: absolute;
+    width: 310px;
+    right: calc((50% - 723px) / 2);
+    top: -100px;
+
+    @media (max-width: 1500px) {
+      right: 20px;
+    }
+
+    @media (max-width: 767px) {
+      top: -50px;
+      width: calc(30% - 40px);
+    }
+
+    img {
       width: 100%;
     }
   }
@@ -1514,6 +1542,14 @@ $grey-color: #8a8a8a;
       margin: 0 15px 0 0;
       bottom: 35px;
 
+      @media (max-width: 450px) {
+        min-width: 100px;
+        width: 100px;
+        bottom: 20px;
+        height: 30px;
+        margin: 0;
+      }
+
       &:hover {
         img {
           right: -18px;
@@ -1523,16 +1559,28 @@ $grey-color: #8a8a8a;
 
       &.prev {
         left: 40px;
+
+        @media (max-width: 450px) {
+          left: 30px;
+        }
       }
 
       &.next {
         right: 40px;
+
+        @media (max-width: 450px) {
+          right: 30px;
+        }
       }
 
       span {
         @extend %buttonS;
         text-align: center;
         color: $red-color;
+
+        @media (max-width: 450px) {
+          font-size: 12px;
+        }
       }
 
       img {
@@ -1562,7 +1610,7 @@ $grey-color: #8a8a8a;
         }
 
         &.next {
-          bottom: 35px;
+          // bottom: 35px;
           .next-arrow {
             right: -18px;
             transition: 0.5s;
@@ -1582,11 +1630,11 @@ $grey-color: #8a8a8a;
   @media (max-width: 1000px) {
     padding: 30px 30px 117px;
   }
-  @media (max-width: 500px) {
-    padding: 20px 20px 117px;
+  @media (max-width: 450px) {
+    padding: 20px 20px 80px;
   }
   @media (max-width: 360px) {
-    padding: 10px 10px 117px;
+    padding: 10px 10px 70px;
   }
 
   &__title {
@@ -1594,10 +1642,10 @@ $grey-color: #8a8a8a;
     padding: 0 0 30px 0;
 
     @media (max-width: 1000px) {
-      padding: 0 0 20px 0;
+      padding: 0 55px 20px 0;
     }
     @media (max-width: 700px) {
-      padding: 0 0 10px 0;
+      padding: 0 55px 10px 0;
     }
     @media (max-width: 350px) {
       font-size: 20px;
@@ -1608,16 +1656,24 @@ $grey-color: #8a8a8a;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__option {
     @extend %buttonS;
     display: flex;
     align-items: center;
-    // justify-content: center;
     padding: 18px 20px;
     background: rgba(255, 255, 255, 0.05);
     transition: 0.5s;
+
+    @media (max-width: 450px) {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
 
     &:hover {
       color: $red-color;
@@ -1653,6 +1709,10 @@ $grey-color: #8a8a8a;
   &__block {
     display: flex;
     gap: 20px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
   &__bonus {
@@ -1671,6 +1731,11 @@ $grey-color: #8a8a8a;
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 450px) {
+      width: 70px;
+      height: 70px;
+    }
+
     img {
       height: 100%;
     }
@@ -1678,5 +1743,9 @@ $grey-color: #8a8a8a;
 
   &__text {
     @extend %SH1;
+
+    @media (max-width: 450px) {
+      font-size: 14px;
+    }
   }
 }
