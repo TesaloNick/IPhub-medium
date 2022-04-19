@@ -19,7 +19,7 @@
   color: #ffffff;
 }
 
-.pop-up__title, .test-slider__title, .bonuses__title {
+.pop-up__title, .test-slider__title, .bonuses__title, .forum__title h3 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -46,7 +46,7 @@
   color: #ffffff;
 }
 
-.pop-up__subtitle, .pop-up__input, .pop-up__textarea, .pop-up__button, .header__button-consultation, .header__list li a, .menu__content, .main__button-consultation span, .main__button-service span, .services__button-top span, .services__button-bottom span, .service__title, .test__slider .slick-arrow span, .test-slider__option, .cases__button-top span, .cases__button-bottom span {
+.pop-up__subtitle, .pop-up__input, .pop-up__textarea, .pop-up__button, .header__button-consultation, .header__list li a, .menu__content, .main__button-consultation span, .main__button-service span, .services__button-top span, .services__button-bottom span, .service__title, .test__slider .slick-arrow span, .test-slider__option, .cases__button-top span, .cases__button-bottom span, .forum__subtitle p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -1771,6 +1771,7 @@
 .test__back-image {
   position: absolute;
   width: 310px;
+  min-width: 120px;
   right: calc((50% - 723px) / 2);
   top: -100px;
 }
@@ -1797,6 +1798,8 @@
   z-index: 1;
   top: 40px;
   right: 40px;
+  padding: 0 0 0 5px;
+  background-color: #1b1b1b;
 }
 
 @media (max-width: 1000px) {
@@ -1971,40 +1974,40 @@
   width: 100%;
   background: #1b1b1b;
   border-radius: 10px;
-  padding: 40px 40px 117px;
+  padding: 40px 0 117px;
 }
 
 @media (max-width: 1000px) {
   .test-slider {
-    padding: 30px 30px 117px;
+    padding: 30px 0 117px;
   }
 }
 
 @media (max-width: 450px) {
   .test-slider {
-    padding: 20px 20px 80px;
+    padding: 20px 0 80px;
   }
 }
 
 @media (max-width: 360px) {
   .test-slider {
-    padding: 10px 10px 70px;
+    padding: 10px 0 70px;
   }
 }
 
 .test-slider__title {
-  padding: 0 0 30px 0;
+  padding: 0 0 30px 40px;
 }
 
 @media (max-width: 1000px) {
   .test-slider__title {
-    padding: 0 55px 20px 0;
+    padding: 0 55px 20px 30px;
   }
 }
 
 @media (max-width: 700px) {
   .test-slider__title {
-    padding: 0 55px 10px 0;
+    padding: 0 55px 10px 30px;
   }
 }
 
@@ -2020,12 +2023,26 @@
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+  padding: 0 40px;
 }
 
 @media (max-width: 1000px) {
   .test-slider__options {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .test-slider__options {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .test-slider__options {
+    padding: 0 10px;
   }
 }
 
@@ -2788,5 +2805,89 @@
   font-size: 14px;
   line-height: 140%;
   color: #5c5c5c;
+}
+
+.forum__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 0 35px 0;
+}
+
+@media (max-width: 450px) {
+  .forum__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 15px;
+  }
+}
+
+.forum__title h3 {
+  color: #1b1b1b;
+}
+
+@media (max-width: 500px) {
+  .forum__title h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .forum__title h3 {
+    font-size: 20px;
+  }
+}
+
+.forum__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 550px) {
+  .forum__subtitle {
+    gap: 20px;
+  }
+}
+
+.forum__subtitle p:nth-of-type(1) {
+  color: #5c5c5c;
+}
+
+.forum__subtitle p:nth-of-type(2) {
+  color: #da4533;
+}
+
+.userforum__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .userforum__image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.userforum__image img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

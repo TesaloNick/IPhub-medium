@@ -1459,6 +1459,7 @@ $grey-color: #8a8a8a;
   &__back-image {
     position: absolute;
     width: 310px;
+    min-width: 120px;
     right: calc((50% - 723px) / 2);
     top: -100px;
 
@@ -1481,6 +1482,8 @@ $grey-color: #8a8a8a;
     z-index: 1;
     top: 40px;
     right: 40px;
+    padding: 0 0 0 5px;
+    background-color: $black-color;
 
     @media (max-width: 1000px) {
       top: 30px;
@@ -1634,27 +1637,27 @@ $grey-color: #8a8a8a;
   width: 100%;
   background: $black-color;
   border-radius: 10px;
-  padding: 40px 40px 117px;
+  padding: 40px 0 117px;
 
   @media (max-width: 1000px) {
-    padding: 30px 30px 117px;
+    padding: 30px 0 117px;
   }
   @media (max-width: 450px) {
-    padding: 20px 20px 80px;
+    padding: 20px 0 80px;
   }
   @media (max-width: 360px) {
-    padding: 10px 10px 70px;
+    padding: 10px 0 70px;
   }
 
   &__title {
     @extend %SH0;
-    padding: 0 0 30px 0;
+    padding: 0 0 30px 40px;
 
     @media (max-width: 1000px) {
-      padding: 0 55px 20px 0;
+      padding: 0 55px 20px 30px;
     }
     @media (max-width: 700px) {
-      padding: 0 55px 10px 0;
+      padding: 0 55px 10px 30px;
     }
     @media (max-width: 350px) {
       font-size: 20px;
@@ -1665,9 +1668,17 @@ $grey-color: #8a8a8a;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    padding: 0 40px;
 
     @media (max-width: 1000px) {
       grid-template-columns: repeat(1, 1fr);
+      padding: 0 30px;
+    }
+    @media (max-width: 450px) {
+      padding: 0 20px;
+    }
+    @media (max-width: 360px) {
+      padding: 0 10px;
     }
   }
 
@@ -2274,5 +2285,105 @@ $grey-color: #8a8a8a;
     font-size: 14px;
     line-height: 140%;
     color: #5c5c5c;
+  }
+}
+
+.forum {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 0 35px 0;
+
+    @media (max-width: 450px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 15px;
+    }
+
+    h3 {
+      @extend %SH0;
+      color: $black-color;
+
+      @media (max-width: 500px) {
+        font-size: 22px;
+      }
+      @media (max-width: 400px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width: 550px) {
+      gap: 20px;
+    }
+
+    p {
+      @extend %buttonS;
+
+      &:nth-of-type(1) {
+        color: #5c5c5c;
+      }
+
+      &:nth-of-type(2) {
+        color: $red-color;
+      }
+    }
+  }
+
+  &__userforum {
+  }
+}
+
+.userforum {
+  &__left {
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media (max-width: 400px) {
+      width: 80px;
+      height: 80px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__personal-information {
+  }
+
+  &__name {
+  }
+
+  &__profession {
+  }
+
+  &__center {
+  }
+
+  &__forumname {
+  }
+
+  &__description {
+  }
+
+  &__right {
+  }
+
+  &__date {
+  }
+
+  &__time {
   }
 }
