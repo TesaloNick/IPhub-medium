@@ -292,7 +292,7 @@ if (windowWidth <= 1500 && windowWidth > 1256) {
 //   multiplyNumber.innerHTML = +number.value * 49;
 // })
 
-// //-----------------------возрастающие числа------------------------------
+//-----------------------возрастающие числа------------------------------
 
 function countup(className) {
   var countBlockTop = $("." + className).offset().top;
@@ -374,6 +374,7 @@ $(function () {
   popUp('pop-up__container')
   popUp('pop-up__close')
   popUp('header__button-consultation')
+  popUp('ban__button')
 });
 
 //------------------------------замена фона при непустом поле ввода-------------------------

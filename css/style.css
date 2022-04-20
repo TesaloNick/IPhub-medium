@@ -10,7 +10,7 @@
   color: #ffffff;
 }
 
-.experience__title, .services__title, .test__title, .cases__title, .team__title {
+.experience__title, .services__title, .test__title, .cases__title, .team__title, .ban__title {
   font-family: "STIX Two Text";
   font-style: normal;
   font-weight: 400;
@@ -37,7 +37,7 @@
   color: #ffffff;
 }
 
-.experience__subtitle, .services__subtitle p, .test__subtitle, .cases__subtitle p, .case__title, .team__subtitle {
+.experience__subtitle, .services__subtitle p, .test__subtitle, .cases__subtitle p, .case__title, .team__subtitle, .ban__subtitle {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -55,7 +55,7 @@
   color: #ffffff;
 }
 
-.pop-up__subtitle, .pop-up__input, .pop-up__textarea, .pop-up__button, .header__button-consultation, .header__list li a, .menu__content, .main__button-consultation span, .main__button-service span, .services__button-top span, .services__button-bottom span, .service__title, .test__slider .slick-arrow span, .test-slider__option, .cases__button-top span, .cases__button-bottom span, .forum__subtitle p, .userforum__name {
+.pop-up__subtitle, .pop-up__input, .pop-up__textarea, .pop-up__button, .header__button-consultation, .header__list li a, .menu__content, .main__button-consultation span, .main__button-service span, .services__button-top span, .services__button-bottom span, .service__title, .test__slider .slick-arrow span, .test-slider__option, .cases__button-top span, .cases__button-bottom span, .forum__subtitle p, .userforum__name, .ban__button span {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -148,6 +148,10 @@
 
 .background__team {
   background: url(../img/team/background.png) center/cover no-repeat;
+}
+
+.background__ban {
+  background: url(../img/ban/background.png) center/cover no-repeat;
 }
 
 .pop-up {
@@ -3153,5 +3157,179 @@
   .userforum__time {
     font-size: 14px;
   }
+}
+
+.ban {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 600px 33%;
+      grid-template-columns: 600px 33%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0;
+}
+
+@media (max-width: 1252px) {
+  .ban {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .ban {
+    -ms-grid-columns: 66% 33%;
+        grid-template-columns: 66% 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ban {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .ban {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .ban {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .ban__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .ban__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ban__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .ban__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ban__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 359px) {
+  .ban__title {
+    font-size: 20px;
+  }
+}
+
+.ban__subtitle {
+  padding: 16px 0 44px 0;
+}
+
+@media (max-width: 768px) {
+  .ban__subtitle {
+    padding: 14px 0 42px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .ban__subtitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .ban__subtitle {
+    padding: 12px 0 28px;
+    font-size: 14px;
+  }
+}
+
+.ban__button {
+  display: block;
+  max-width: 299px;
+  width: 100%;
+  height: 91px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.ban__button > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid transparent;
+}
+
+@media (max-width: 550px) {
+  .ban__button > div {
+    border: 1px solid #ffffff;
+    -webkit-transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+            transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+  }
+}
+
+.ban__button > div:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid #ffffff;
+  -webkit-transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+          transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+}
+
+.ban__button span {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .ban__image {
+    display: none;
+  }
+}
+
+.ban__image img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
