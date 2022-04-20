@@ -1298,7 +1298,7 @@ $grey-color: #8a8a8a;
   padding: 20px 25px;
   display: flex !important;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin: 0 20px 0 0;
   transition: 0.5s;
   position: relative;
@@ -1324,6 +1324,9 @@ $grey-color: #8a8a8a;
     .icon-service-image3,
     .icon-service-image4,
     .icon-service-image5 {
+      font-size: 100px;
+      transition: 0.3s;
+
       &::before {
         color: $grey-color;
         transition: 0.5s;
@@ -1333,12 +1336,16 @@ $grey-color: #8a8a8a;
     .service__title {
       color: #fff;
       transition: 0.5s;
+      // bottom: auto;
+      // top: 0;
     }
 
     .service__subtitle {
       display: block;
       transition: 0.5s;
-      top: 0;
+      // position: relative;
+      // top: none;
+      bottom: -50%;
     }
   }
 
@@ -1361,15 +1368,14 @@ $grey-color: #8a8a8a;
     font-size: 176px;
     align-self: center;
     padding: 0 0 30px 0;
+    transition: 0.3s;
 
     @media (max-width: 1000px) {
       font-size: 16.5vw;
     }
-
     @media (max-width: 700px) {
       font-size: 27.5vw;
     }
-
     @media (max-width: 450px) {
       font-size: 50vw;
     }
@@ -1379,14 +1385,17 @@ $grey-color: #8a8a8a;
     }
   }
 
+  &__text {
+    position: relative;
+    flex: 1 1 auto;
+  }
+
   &__title {
     @extend %buttonS;
     color: $grey-color;
     position: absolute;
-    bottom: 20px;
-    // top: 20%;
     transition: 0.5s;
-    padding: 0 0 5px 0;
+    padding: 0 25px 5px 0;
 
     @media (max-width: 768px) {
       font-size: 16px;
@@ -1394,6 +1403,7 @@ $grey-color: #8a8a8a;
     @media (max-width: 500px) {
       font-size: 14px;
       bottom: 10px;
+      padding: 0 15px 5px 0;
     }
     @media (max-width: 400px) {
       font-size: 16px;
@@ -1404,9 +1414,9 @@ $grey-color: #8a8a8a;
     @extend %label;
     color: $grey-color;
     position: relative;
-    top: 50%;
+    bottom: -200%;
     transition: 0.5s;
-    justify-self: end;
+    // justify-self: end;
   }
 }
 

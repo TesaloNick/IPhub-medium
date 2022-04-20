@@ -1567,9 +1567,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0 20px 0 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1592,6 +1589,16 @@
   transition: 0.5s;
 }
 
+.service:hover .icon-service-image1,
+.service:hover .icon-service-image2,
+.service:hover .icon-service-image3,
+.service:hover .icon-service-image4,
+.service:hover .icon-service-image5 {
+  font-size: 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .service:hover .icon-service-image1::before,
 .service:hover .icon-service-image2::before,
 .service:hover .icon-service-image3::before,
@@ -1612,7 +1619,7 @@
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  top: 0;
+  bottom: -50%;
 }
 
 .service .icon-shape {
@@ -1638,6 +1645,8 @@
       -ms-grid-row-align: center;
       align-self: center;
   padding: 0 0 30px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 1000px) {
@@ -1679,13 +1688,19 @@
   transition: 0.5s;
 }
 
+.service__text {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 .service__title {
   color: #8a8a8a;
   position: absolute;
-  bottom: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 0 0 5px 0;
+  padding: 0 25px 5px 0;
 }
 
 @media (max-width: 768px) {
@@ -1698,6 +1713,7 @@
   .service__title {
     font-size: 14px;
     bottom: 10px;
+    padding: 0 15px 5px 0;
   }
 }
 
@@ -1710,11 +1726,9 @@
 .service__subtitle {
   color: #8a8a8a;
   position: relative;
-  top: 50%;
+  bottom: -200%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -ms-grid-column-align: end;
-      justify-self: end;
 }
 
 .test {
