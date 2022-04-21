@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="../../fonts/stylesheet.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="./css/services.css">
+  <link rel="stylesheet" type="text/css" href="../../js/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="../../js/slick/slick-theme.css" />
+  <script defer src="../../js/scripts.js"></script>
+</head>
+
+<body>
+  <div class="pop-up">
+    <div class="pop-up__container"></div>
+    <div class="pop-up__block">
+      <div class="pop-up__close">
+        <span></span>
+        <span></span>
+      </div>
+      <form action="" class="pop-up__form" onchange="">
+        <h2 class="pop-up__title">Оставьте заявку</h2>
+        <p class="pop-up__subtitle">Укажите свои данные, и наш специалист свяжется с вами</p>
+        <label for="username" class="pop-up__label">Как к вам обращаться</label>
+        <input type="text" id="username" class="pop-up__input" required>
+        <label for="phone" class="pop-up__label">Номер телефона / WhatsApp</label>
+        <input type="tel" id="phone" class="pop-up__input" required>
+        <label for="email" class="pop-up__label">Почта</label>
+        <input type="email" id="email" class="pop-up__input" required>
+        <label for="request" class="pop-up__label">Запрос</label>
+        <textarea type="email" id="request" class="pop-up__textarea" optional></textarea>
+        <div class="pop-up__radio">
+          <input type="checkbox" id="deal" name="deal" value="deal">
+          <label for="deal">Я принимаю соглашение на <a href="">обработку персональных данных</a> и <a href="">политику
+              конфиденциальности</a></label>
+        </div>
+        <button class="pop-up__button">
+          <p>Отправить</p>
+          <img src="../../img/main/button-arrow-right.svg" alt="">
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="background">
+    <div class="background__header">
+      <div class="container">
+        <header class="header">
+          <a href="../../index.html" class="header__logo" onclick="slowScroll ('.header')"><img
+              src="../../img/header/logo.svg" alt="loho"></a>
+          <div class="header__middle">
+            <a href="tel:+78888888888" class="header__phone">+7 (888) 888 88 88</a>
+            <a href="" class="header__button-consultation">Получить консультацию</a>
+          </div>
+          <nav class="header__nav menu">
+            <div class="menu__container">
+              <ul class="header__list menu__list">
+                <li><a href=''>Услуги</a></li>
+                <li><a href=''>Кейсы</a></li>
+                <li><a href=''>FAQ</a></li>
+              </ul>
+              <div class="header__menu-text-block menu__text-block">
+                <div class="menu__contacts">
+                  <p class="menu__title">Наши контакты:</p>
+                  <a href="mailto:example@iphub.com" class="menu__content">example@iphub.com</a>
+                  <a href="tel:+78888888888" class="menu__content">+7 (888) 888 88 88</a>
+                </div>
+                <div class="menu__socials">
+                  <p class="menu__title">Мы в соцсетях:</p>
+                  <a href="#" class="menu__content">Facebook</a>
+                  <a href="#" class="menu__content">Instagram</a>
+                </div>
+                <div class="menu__road">
+                  <p class="menu__title">Как добраться:</p>
+                  <a href="#" class="menu__content">Схема проезда</a>
+                </div>
+                <div class="menu__adress">
+                  <p>123317, г. Москва, Пресненская<br>
+                    наб., д.8, стр.1, эт.3, п.1, оф.10</p>
+                  <p>ИНН: 7703472433</p>
+                  <p>КПП: 770301001</p>
+                </div>
+                <div class="header__menu-image menu__image"><img src="../../img/header/menu-image.png" alt=""></div>
+              </div>
+            </div>
+          </nav>
+          <div class="header__burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </header>
+      </div>
+    </div>
+    <div class="background__services-page">
+      <div class="container">
+        <div class="services-page">
+          <div class="services-page__head">
+            <div class="services-page__navigation">
+              <a href="../../index.html" class="services-page__return-button"><img
+                  src="../../img/main/button-arrow-right.svg" alt=""></a>
+              <div class="services-page__crumbs">
+                <p><a href="../../index.html">Главная</a> > <a href="#">Все услуги</a></p>
+              </div>
+            </div>
+            <h1 class="services-page__title">Все услуги</h1>
+            <div class="services-page__image"><img src="./img/head-image.png" alt="head-image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="background__footer">
+      <div class="container">
+        <div class="footer">
+          <div class="footer__head">
+            <div class="footer__logo"><img src="../../img/header/logo.svg" alt=""></div>
+            <p class="footer__legal-name">Общество с ограниченной
+              ответственностью «Центр интеллектуальной собственности и инноваций „АйПиХаб“»</p>
+            <div class="footer__contacts">
+              <p>123317, г.Москва, Пресненская наб., д.8, стр.1, эт.3, п.1, оф.10</p>
+              <p><span>ИНН: </span>7703472433</p>
+              <p><span>КПП: </span>770301001</p>
+            </div>
+          </div>
+          <div class="footer__menu footer-menu">
+            <div class="footer-menu__column">
+              <p class="footer-menu__header">Навигация<span> по сайту:</span></p>
+              <a href="#" class="footer-menu__item">Услуги</a>
+              <a href="#" class="footer-menu__item">Кейсы</a>
+              <a href="#" class="footer-menu__item">FAQ</a>
+            </div>
+            <div class="footer-menu__column">
+              <p class="footer-menu__header">Наши контакты:</p>
+              <a href="mailto:example@iphub.com" class="footer-menu__item">example@iphub.com</a>
+              <a href="tel:+78888888888" class="footer-menu__item">+7 (888) 888 88 88</a>
+              <a href="#" class="footer-menu__item road">Схема проезда</a>
+            </div>
+            <div class="footer-menu__column">
+              <p class="footer-menu__header">Мы в соцсетях:</p>
+              <a href="#" class="footer-menu__item">Facebook</a>
+              <a href="#" class="footer-menu__item">Instagram</a>
+            </div>
+            <div class="footer-menu__column">
+              <p class="footer-menu__header">Как добраться:</p>
+              <a href="#" class="footer-menu__item">Схема проезда</a>
+            </div>
+          </div>
+          <div class="footer__cellar">
+            <a href="">© 2021 IPhub. Все права защищены.</a>
+            <a href="">Публичная оферта</a>
+            <a href="">Пользовательское соглашение</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/jquery-spincrement-master/jquery.spincrement.js"></script>
+  <script src="../../js/slick/slick.min.js"></script>
+  <script src="../../js/jquery.ddslick.min.js"></script>
+</body>
+
+</html>

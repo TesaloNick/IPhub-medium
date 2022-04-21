@@ -406,6 +406,7 @@ function removeMenu() {
 }
 
 function slowScroll(id) {
+  // id.preventDefault()
   var offset = 0;
   // if (id === '.about-service') {
   //   $('html, body').animate({

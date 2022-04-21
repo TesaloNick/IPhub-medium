@@ -91,6 +91,9 @@ $grey-color: #8a8a8a;
 
 .background {
   background: $black-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 
   &__header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -101,7 +104,6 @@ $grey-color: #8a8a8a;
   }
 
   &__main {
-    background-color: $black-color;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
       url(../img/backgrounds/backgroud-main.png) center/cover no-repeat; // ПРОВЕРИТЬ
   }
@@ -364,7 +366,7 @@ $grey-color: #8a8a8a;
   &__button {
     width: 135px;
     height: 41px;
-    border: 1px solid #da4533;
+    border: 1px solid $red-color;
     border-radius: 50%;
     background-color: $black-color;
     position: relative;
@@ -706,7 +708,6 @@ $grey-color: #8a8a8a;
     gap: 20px;
   }
   @media (max-width: 768px) {
-    padding: 0 0 36px 0;
     padding: 179px 0 80px;
   }
   @media (max-width: 767px) {
@@ -1020,13 +1021,13 @@ $grey-color: #8a8a8a;
 .statistics {
   &__wrapper {
     position: relative;
-    background: linear-gradient(to left top, #202020 70%, #da4533 90%);
+    background: linear-gradient(to left top, #202020 70%, $red-color 90%);
     padding: 1px;
     border-radius: 8px;
     transition: 0.5s;
 
     &:hover {
-      background: linear-gradient(to left top, #3a3a3a 70%, #da4533 90%);
+      background: linear-gradient(to left top, #3a3a3a 70%, $red-color 90%);
       transition: 0.5s;
     }
   }
@@ -2147,7 +2148,7 @@ $grey-color: #8a8a8a;
 
   &__title {
     @extend %H1;
-    color: #1b1b1b;
+    color: $black-color;
 
     @media (max-width: 900px) {
       font-size: 32px;
@@ -2288,7 +2289,7 @@ $grey-color: #8a8a8a;
 
   &__name {
     @extend %SH1;
-    color: #1b1b1b;
+    color: $black-color;
     padding: 0 0 5px 0;
   }
 
@@ -2435,7 +2436,7 @@ $grey-color: #8a8a8a;
 
   &__name {
     @extend %buttonS;
-    color: #1b1b1b;
+    color: $black-color;
   }
 
   &__profession {
@@ -2456,14 +2457,14 @@ $grey-color: #8a8a8a;
 
   &__forumname {
     @extend %SH1;
-    color: #1b1b1b;
+    color: $black-color;
 
     &::after {
       content: "";
       height: 1px;
       width: 100%;
       display: block;
-      // background: linear-gradient(90deg, #da4533 100%, rgba(218, 69, 51, 0) 50%);
+      // background: linear-gradient(90deg, $red-color 100%, rgba(218, 69, 51, 0) 50%);
       background: linear-gradient(90deg, rgba(218, 69, 51, 1) 0%, rgba(218, 69, 51, 0) 100%);
     }
   }
@@ -2485,7 +2486,7 @@ $grey-color: #8a8a8a;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #da4533;
+    border: 1px solid $red-color;
     border-radius: 50%;
     position: relative;
     margin: 0 20px 0 0;
@@ -2521,7 +2522,7 @@ $grey-color: #8a8a8a;
 
   &__date {
     @extend %SH1;
-    color: #1b1b1b;
+    color: $black-color;
 
     @media (max-width: 768px) {
       font-size: 16px;
@@ -2530,7 +2531,7 @@ $grey-color: #8a8a8a;
 
   &__time {
     @extend %body;
-    color: #1b1b1b;
+    color: $black-color;
 
     @media (max-width: 768px) {
       font-size: 14px;
@@ -2718,7 +2719,7 @@ $grey-color: #8a8a8a;
   &__legal-name {
     justify-self: start;
     @extend %label;
-    color: #8a8a8a;
+    color: $grey-color;
     padding: 0 15% 0 0;
 
     @media (max-width: 999px) {
@@ -2837,9 +2838,15 @@ $grey-color: #8a8a8a;
   &__item {
     @extend %buttonS;
     padding: 0 0 15px 0;
+    transition: 0.5s;
 
     @media (max-width: 400px) {
       font-size: 14px;
+    }
+
+    &:hover {
+      color: $red-color;
+      transition: 0.5s;
     }
   }
 }
