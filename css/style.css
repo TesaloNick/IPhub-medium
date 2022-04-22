@@ -1923,7 +1923,6 @@
           align-items: center;
   cursor: pointer;
   position: absolute;
-  margin: 0 15px 0 0;
   bottom: 35px;
 }
 
@@ -1945,6 +1944,7 @@
 
 .test__slider .slick-arrow.prev {
   left: 40px;
+  margin: 0 0 0 15px;
 }
 
 @media (max-width: 450px) {
@@ -1955,6 +1955,7 @@
 
 .test__slider .slick-arrow.next {
   right: 40px;
+  margin: 0 15px 0 0;
 }
 
 @media (max-width: 450px) {

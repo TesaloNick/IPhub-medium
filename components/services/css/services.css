@@ -8,7 +8,7 @@
   color: #ffffff;
 }
 
-.services-page__crumbs, .services-page__crumbs a {
+.services-page__crumbs, .services-page__crumbs a, .services-page__search input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -53,6 +53,7 @@
   -ms-grid-columns: 1fr minmax(168px, 295px);
       grid-template-columns: 1fr minmax(168px, 295px);
   gap: 33.5px 10px;
+  padding: 0 0 30px;
 }
 
 @media (max-width: 1000px) {
@@ -66,6 +67,7 @@
   .services-page__head {
     -ms-grid-columns: 1fr 168px;
         grid-template-columns: 1fr 168px;
+    padding: 0 0 20px;
   }
 }
 
@@ -186,5 +188,71 @@
 
 .services-page__image img {
   width: 100%;
+}
+
+.services-page__search {
+  height: 56px;
+  max-width: 960px;
+  width: 100%;
+  position: relative;
+}
+
+.services-page__search .icon-search {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.services-page__search input {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #ffffff;
+  padding: 0 0 0 15px;
+}
+
+@media (max-width: 450px) {
+  .services-page__search input {
+    font-size: 14px;
+  }
+}
+
+.services-page__search input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+
+.services-page__search input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.services-page__search input::-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.services-page__search input::placeholder {
+  color: #8a8a8a;
+}
+
+.services-page__search input:hover {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.services-page__search input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.services-page__search input[type="search"]::-webkit-search-decoration,
+.services-page__search input[type="search"]::-webkit-search-cancel-button,
+.services-page__search input[type="search"]::-webkit-search-results-button,
+.services-page__search input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
 /*# sourceMappingURL=services.css.map */
